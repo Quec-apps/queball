@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="res/jquery.min.js"></script>
+	<title>Queball</title>
+<style>
+@font-face {
+	font-family: Roboto;
+	src: url(res/fonts/Roboto-Bold.ttf);
+}
+html {
+width: 100vw; height: 100vh; overflow: hidden;
+}
+body {
+width: 100vw; height: 100vh; overflow: hidden;
+margin: 0; font-family: Roboto;
+user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.title-bg {
+width: 100vw; height: 10vh;
+display: flex; align-items: center;
+transition: all 400ms ease; transform: translateX(-20%); opacity: 0; 
+}
+.back-img {
+width: 8vw; height: 8vw;
+}
+.title {
+width: 50%;
+margin-left: 1vw;
+font-size: 7vw;
+}
+
+.nav {
+width: 100vw; height:16vh; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+}
+.nav-ct, .nav-ct2 {
+width:85vw; height: 7vh; background-color: #fabce8; border-radius: 9px; padding: 0 5vw;
+display: flex; justify-content: space-between; align-items: center;
+transform: scale(1.2); opacity: 0;
+transition: all 400ms ease;
+} .nav-ct2 {transform: scale(1); opacity: 1;}
+.nav-img {
+width: 5vh; height: 5vh;
+}
+
+.delete-bg {
+width: 100vw; display: flex; justify-content: space-evenly; align-items: center; 
+transition: all 400ms ease; transform: scale(1.2); opacity: 0;
+}
+.del {
+width:20vw; padding:1vh 0; background-color: #ff4c1e; text-align: center; color: white; font-size: 3.3vw;
+border-radius: 9px;
+}
+
+.main-ct {
+width: 100vw; height: 74vh; overflow-y: scroll;
+display: flex; flex-wrap: wrap; align-content: baseline; justify-content: space-evenly;
+transform: scale(1.2); opacity: 0;
+transition: all 400ms ease;
+}
+.ct {
+width: 150px; height: 50px; border-radius: 8px; margin-top: 2vh;
+position: relative; background-color: #befde5; display: flex; justify-content: space-evenly; align-items: center;
+}
+.ct-img {
+width:35px; height: 35px; border-radius: 10px; background-color: aliceblue;
+}
+.ct-img2 {
+width:23px; height: 23px;
+position: absolute; top:-1px; left:86%; border-radius: 50%; display: none;
+}
+.wishlist {background-color: #fabce8;}
+.completed {background-color: #52c51c;}
+.ct-txt {
+font-size: 12px; display: flex; align-items: center; justify-content: center;
+text-align: center;
+}
+
+.active:active {
+transition: all 200ms ease;
+opacity: .4 !important;
+}
+
+.fixed-img {
+position: fixed;
+background-color: #fabce8;
+border-radius: 7px; opacity: 0; transition: all 350ms ease;
+}
+.f-img1 {
+width: 10vw; height: 10vw;
+top:30vh; left: 5vw; transform: rotate(27deg);
+}
+.f-img2 {
+width: 10vw; height: 10vw;
+top:50vh; left: 70vw; transform: rotate(43deg);
+}
+.f-img3 {
+width: 10vw; height: 10vw;
+top:80vh; left: 40vw; transform: rotate(-30deg);
+}
+</style>
+</head>
+<body>
+<img src="res/wishlist.png" class="fixed-img f-img1">
+<img src="res/wishlist.png" class="fixed-img f-img2">
+<img src="res/wishlist.png" class="fixed-img f-img3">
+<div class="title-bg">
+	<img src="res/back-img.png" alt="" class="back-img active">
+	<div class="title">Wishlist</div>
+</div>
+
+<div class="nav">
+<div class="nav-ct active">
+	<div class="nav-txt nav-txt2">Easy</div>
+	<img src="res/down.png" class="nav-img">
+</div>
+<div class="delete-bg">
+	<div class="del delete active">Delete</div>
+	<div class="del delete-all active">Delete All</div>
+</div>
+</div>
+
+<div class="main-ct">
+
+</div>
+<style>
+.dropdown-bg-con {
+width: 100vw; height: 100vh;
+position: fixed; top: 0; left: 0; display: none;
+background-color: rgba(0, 0, 0, .4);
+}
+.dropdown-top {
+width: 100vw; height: 80vh;
+}
+.dropdown-ct {
+width: 100vw; height: 20vh;
+background-color: white; border-radius: 9px;
+display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+animation: dropdown-ct 400ms ease 1;
+transition: all 400ms ease;
+} @keyframes dropdown-ct {
+	0% {transform: translateY(20%); opacity: 0;}
+	100% {transform: translateY(0%); opacity: 1;}
+}
+.radio-btn {
+width: 2vh; height: 2vh; border: solid 4px black; border-radius: 50%;
+}
+.warn {
+position: fixed;
+width: 100vw; text-align: center;
+top: 55vh; font-size: 3.5vw; display: none;
+transition: all 400ms ease; transform: scale(1.2);
+}
+</style>
+<div class="dropdown-bg-con">
+<div class="dropdown-top"></div>
+<div class="dropdown-ct">
+	<div class="nav-ct2 easy active">
+		<div class="nav-txt">Easy</div><div class="radio-btn radio-de"></div>
+	</div>
+	<div class="nav-ct2 hard active">
+		<div class="nav-txt">Hard</div><div class="radio-btn radio-dh"></div>
+	</div>
+</div>
+</div>
+<div class="warn">Ooops!<br/>You haven't saved any skills yet</div>
+<script src="res/variables/credit.js"></script>
+<script src="res/variables/de.js"></script>
+<script src="res/variables/dh.js"></script>
+<script>
+setTimeout(() => {$(".title-bg").css({transform:'translateY(0)', opacity:'1'}); $(".fixed-img").css({opacity:'.3'}); }, 100);
+setTimeout(() => {$(".main-ct, .nav-ct, .delete-bg, .warn").css({transform:'scale(1)', opacity:'1'});}, 200);
+
+function Outro() {
+setTimeout(() => {$(".title-bg").css({transform:'translateY(-20%)', opacity:'0'}); $(".fixed-img").css({opacity:'0'});}, 100);
+setTimeout(() => {$(".main-ct, .nav-ct, .delete-bg, .warn").css({transform:'scale(1.2)', opacity:'0'});}, 200);
+}
+
+
+$(".back-img").click(function() {
+Outro();
+setTimeout(() => {window.history.back();}, 500);
+});
+
+var saved = localStorage.getItem("saved");
+if (saved == "w") {
+$(".title").html("Wishlist");
+$(".fixed-img").attr("src","res/wishlist.png");	
+} else {
+$(".title").html("Completed");
+$(".fixed-img").attr("src","res/completed.png");	
+}
+var wishlistOpened = "de";
+$(".radio-" + wishlistOpened).css({backgroundColor:'black'});
+
+var deleteOne = false;
+
+function AppendAll() {
+$(".main-ct").empty();
+for (let i = 1; i <= window[wishlistOpened + "_total"]; i++) {
+if (localStorage.getItem("" + wishlistOpened + "_" + saved + i + "") != null) {
+$(".main-ct").append(`
+<div class="ct active" id="ct${i}">
+	<img class="ct-img" src="res/credit/${window[wishlistOpened + "_cr" + i][1]}.jpg">
+	<div class="ct-txt">${i}. ${window[wishlistOpened + "_t" + i]}</div>
+	<img src="res/wishlist.png" class="ct-img2 wishlist" id="wishlist${i}">
+	<img src="res/completed2.png" class="ct-img2 completed" id="completed${i}">
+</div>
+`);
+}
+}
+if($('.main-ct').find('div').length > 0) {
+	$('.warn').fadeOut(); } else { 
+$('.warn').fadeIn(); 
+}
+if (!deleteOne) {
+$(".ct").css({backgroundColor:'#befde5'});
+} else {
+$(".ct").css({backgroundColor:'#ff4c1eaa'});
+}
+ctClick();
+}
+AppendAll();
+
+function dropdownHide() {
+$(".dropdown-bg-con").fadeOut(); $(".dropdown-ct").css({transform:'translateY(20%)', opacity:'0'});
+setTimeout(() => {
+$(".dropdown-ct").css({transform:'translateY(0%)', opacity:'1'});
+}, 400);
+}
+
+$(".nav-ct2").click(function() {
+setTimeout(() => {dropdownHide();}, 100);
+});
+
+$(".easy").click(function() {
+if (wishlistOpened != "de") {
+wishlistOpened = "de"; $(".nav-txt2").html("Easy");
+$(".radio-btn").css({backgroundColor:'transparent'});
+$(".radio-" + wishlistOpened).css({backgroundColor:'black'});
+AppendAll();
+}
+});
+$(".hard").click(function() {
+if (wishlistOpened != "dh") {
+wishlistOpened = "dh"; $(".nav-txt2").html("Hard");
+$(".radio-btn").css({backgroundColor:'transparent'});
+$(".radio-" + wishlistOpened).css({backgroundColor:'black'});
+AppendAll();
+}
+});
+
+$(".nav-ct").click(function() {
+$(".dropdown-bg-con").fadeIn();
+});
+$(".dropdown-top").click(function() {
+dropdownHide();
+});
+
+$(".delete").click(function() {
+if (!deleteOne) {
+deleteOne = true;
+$(".ct").css({backgroundColor:'#ff4c1eaa'});
+} else {
+deleteOne = false;
+$(".ct").css({backgroundColor:'#befde5'});
+}
+});
+$(".delete-all").click(function() {
+for (let y = 1; y <= window[wishlistOpened + "_total"]; y++) {
+localStorage.removeItem("" + wishlistOpened + "_" + saved + y + "");
+if (y == window[wishlistOpened + "_total"]) {
+AppendAll();
+}
+}
+});
+
+function ctClick() {
+$(".ct").off();
+$(".ct").click(function() {
+if (deleteOne) {
+ct = parseInt($(".ct").attr('id').match(/\d+/));
+localStorage.removeItem("" + wishlistOpened + "_" + saved + ct + "");
+setTimeout(() => {
+AppendAll();
+}, 700);
+} else {
+ct = parseInt($(this).attr('id').match(/\d+/));
+localStorage.setItem("" + wishlistOpened + "_opened", ct );
+localStorage.setItem("opened", wishlistOpened);
+setTimeout(() => {
+parent.location="ct.html";
+}, 400);
+Outro();
+}
+});
+}
+ctClick();
+
+</script>
+</body>
+</html>

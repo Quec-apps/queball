@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="res/jquery.min.js"></script>
+	<title>Queball</title>
+<style>
+@font-face {
+	font-family: Roboto;
+	src: url(res/fonts/Roboto-Bold.ttf);
+}
+html {
+width: 100vw; height: 100vh; overflow: hidden;
+}
+body {
+width: 100vw; height: 100vh; overflow: hidden;
+margin: 0; font-family: Roboto;
+user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.title-bg {
+width: 100vw; height: 10vh;
+display: flex; align-items: center;
+transition: all 400ms ease; transform: translateX(-20%); opacity: 0; 
+}
+.back-img {
+width: 8vw; height: 8vw;
+}
+
+.main-ct {
+width: 100vw; height: 84vh; overflow-y: scroll; padding: 3vh 0;
+display: flex; flex-wrap: wrap; justify-content: space-evenly;
+transform: scale(1.2); opacity: 0;
+transition: all 400ms ease;
+}
+.ct {
+width: 150px; height: 50px; border-radius: 8px; margin-top: 1.5vh;
+position: relative; background-color: #befde5; display: flex; justify-content: space-evenly; align-items: center;
+}
+.ct-img {
+width:35px; height: 35px; border-radius: 10px; background-color: aliceblue;
+}
+.ct-img2 {
+width:23px; height: 23px;
+position: absolute; top:-3px; left:86%; border-radius: 50%; display: none;
+}
+.wishlist {background-color: #fabce8;}
+.completed {background-color: #52c51c;}
+.ct-txt {
+font-size: 12px;
+width: 105px; text-align: center;
+}
+
+.active:active {
+transition: all 200ms ease;
+opacity: .6 !important;
+}
+</style>
+</head>
+<body>
+<div class="title-bg">
+	<img src="res/back-img.png" alt="" class="back-img active">
+</div>
+
+<div class="main-ct">
+
+</div>
+<script src="res/variables/credit.js"></script>
+<script>
+var opened = localStorage.getItem("opened");
+let myScript = document.createElement("script");
+myScript.setAttribute("src", "res/variables/" + opened + ".js");
+document.body.appendChild(myScript);
+
+
+setTimeout(() => {$(".title-bg").css({transform:'translateY(0)', opacity:'1'}); $(".nav-img").css({transform:'translateY(0)', opacity:'1'});}, 100);
+setTimeout(() => {$(".main-ct").css({transform:'scale(1)', opacity:'1'});}, 200);
+
+function Outro() {
+setTimeout(() => {$(".title-bg").css({transform:'translateY(-20%)', opacity:'0'}); $(".nav-img").css({transform:'translateY(-10%)', opacity:'0'});}, 100);
+setTimeout(() => {$(".main-ct").css({transform:'scale(1.2)', opacity:'0'});}, 200);
+}
+
+$(document).ready(function() {
+	ctClick();
+setTimeout(() => {
+		
+for (let i = 1; i <= window[opened + "_total"]; i++) {
+$(".main-ct").append(`
+<div class="ct active" id="c${i}">
+	<img class="ct-img" src="res/credit/${window[opened + "_cr" + i][1]}.jpg">
+	<div class="ct-txt">${i}. ${window[opened + "_t" + i]}</div>
+	<img src="res/wishlist.png" class="ct-img2 wishlist" id="wishlist${i}">
+	<img src="res/completed2.png" class="ct-img2 completed" id="completed${i}">
+</div>
+`);
+}
+
+for (let x = 0; x <= window[opened + "_total"]; x++) {
+if (localStorage.getItem("" + opened + "_w" + x + "") != null) {
+$("#wishlist" + x + "").fadeIn(0);
+}
+if (localStorage.getItem("" + opened + "_c" + x + "") != null) {
+$("#completed" + x + "").fadeIn(0);
+}
+}
+
+
+}, 200);
+
+function ctClick() {
+$(".ct").click(function() {
+ct = parseInt($(this).attr('id').match(/\d+/));
+localStorage.setItem("" + opened + "_opened", ct );
+setTimeout(() => {
+window.history.back();
+}, 400);
+});
+}
+setTimeout(() => {ctClick();}, 300);
+
+
+$(".back-img").click(function() {
+Outro();
+setTimeout(() => {window.history.back();}, 500);
+});
+
+}); // document ready closed
+
+</script>
+</body>
+</html>
