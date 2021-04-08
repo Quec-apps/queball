@@ -127,7 +127,7 @@ opacity: .6 !important;
 </div>
 
 <div class="ct-bg">
-	<div class="ct-title"><span id="number"></span>. <span id="t">ertg</span></div>
+	<div class="ct-title"><span id="number"></span>. <span id="t">Loading...</span></div>
 	<video loop muted autoplay src="" class="video" id="video" type="video/mp4">Preview is not supported by your device</video>
 </div>
 
@@ -206,7 +206,10 @@ $(".wishlist").attr("src","res/wishlist2.png");
 }
 
 }
+
+$( document ).ready(function() {
 setTimeout(() => {AppendAll();}, 200);
+});
 
 
 function showToast() {
