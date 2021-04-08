@@ -145,6 +145,7 @@ opacity: .6 !important;
 </div>
 
 <div class="toast">Added to wishlist</div>
+<script src="res/variables/loaded.js"></script>
 <script src="res/variables/credit.js"></script>
 <script>
 var opened = localStorage.getItem("opened");
@@ -208,7 +209,7 @@ $(".wishlist").attr("src","res/wishlist2.png");
 }
 
 $( document ).ready(function() {
-setTimeout(() => {AppendAll();}, 1000);
+setTimeout(() => {AppendAll();}, 200);
 });
 
 
