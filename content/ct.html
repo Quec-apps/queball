@@ -209,7 +209,16 @@ $(".wishlist").attr("src","res/wishlist2.png");
 }
 
 $( document ).ready(function() {
-setTimeout(() => {AppendAll();}, 200);
+function readyForAppend() {
+if (scriptLoaded) {
+	AppendAll();
+} else {
+	setTimeout(() => {
+		readyForAppend();
+	}, 3000);
+}
+}
+readyForAppend();
 });
 
 
