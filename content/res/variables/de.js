@@ -138,7 +138,7 @@ de_l34 = "https://youtu.be/R3WEqF1NGFM?t=299"
 
 
 de_total = 34; //Dribble easy total
-
+scriptLoaded = true;
 
 
 //mathews body feint by 7mlc = https://youtu.be/R3WEqF1NGFM?t=272

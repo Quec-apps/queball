@@ -45,3 +45,4 @@ Inc ++;
 
 
 dh_total = 8; //Dribble easy total
+scriptLoaded = true;
