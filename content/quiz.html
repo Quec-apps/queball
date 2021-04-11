@@ -257,7 +257,14 @@ $(".q_img-bg").css({display:'flex'});
 $(".q_img").attr("src","res/quiz/" + x + ".jpg");	
 }
 }
-AppendAll();
+function AppendFunction() {
+if (isLoaded) {
+AppendAll();	
+} else {
+setTimeout(() => {AppendFunction();}, 1000);
+}
+}
+AppendFunction();
 
 $(".back-img, .home").click(function() {
 Outro();

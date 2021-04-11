@@ -130,14 +130,17 @@ transform: translateX(-3vw);
 }
 
 .active:active {
-transition: all 200ms ease;
+transition: none;
 opacity: .6 !important;
+}
+.beta-txt {
+font-size: 3.6vw;
 }
 </style>
 </head>
 <body>
 <div class="title-bg">
-<div class="title">Queball</div>
+<div class="title">Queball<span class="beta-txt">(BETA)</span> </div>
 <div class="button-bg">
 	<img class="button completed active" src="res/completed.png">
 	<img class="button wishlist active" src="res/wishlist.png">
@@ -176,6 +179,46 @@ opacity: .6 !important;
 </div>
 </div>
 
+<style>
+.beta-con {
+width: 100vw; height: 100vh;
+position: fixed; top: 0; left: 0;
+display: none; justify-content: center; align-items: center;
+background-color: rgba(0, 0, 0, .3);
+}
+.beta-ct {
+width: 80vw;
+padding: 2vh 3vw; border-radius: 10px;
+text-align: center; background-color: #befde5; color: #55806f;
+display: flex; flex-wrap: wrap; justify-content: center;
+animation: beta-ct 400ms ease 1; transition: all 400ms ease;
+} @keyframes beta-ct {
+0% {transform: scale(1.2); opacity: 0;}
+100% {transform: scale(1); opacity: 1;}
+}
+.beta-btn {
+margin-top: 2vh;
+width: 30vw; padding: 1vh 0; background-color: #21be23; color: white; 
+border-radius: 10px;
+}
+</style>
+<div class="beta-con">
+<div class="beta-ct">
+Skills and Quizes are limited in this beta version.<br/>
+Please write your feeback and suggestions to improve in full release.<br/>
+Thank You.
+<div class="beta-btn active">OK</div>
+<script>
+$(".beta-btn").click(function() {
+setTimeout(() => {
+$(".beta-ct").css({transform:'scale(1.2)', opacity:'0'});
+$(".beta-con").fadeOut();
+}, 100);
+});
+</script>
+</div>
+</div>
+
 <script src="res/variables/loaded.js"></script>
 <script>
 if (localStorage.getItem("de_opened") == null) {
@@ -183,6 +226,7 @@ if (localStorage.getItem("de_opened") == null) {
 	localStorage.setItem("highScore", 0);
 	localStorage.setItem("lives", 10);
 	localStorage.setItem("inter", 0);
+	$(".beta-con").css({display:'flex'});
 }
 
 de_opened = parseInt(localStorage.getItem("de_opened"));

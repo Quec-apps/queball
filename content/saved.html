@@ -42,7 +42,7 @@ font-size: 7vw;
 width: 100vw; height:16vh; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
 }
 .nav-ct, .nav-ct2 {
-width:85vw; height: 7vh; background-color: #fabce8; border-radius: 9px; padding: 0 5vw;
+width:85vw; height: 7vh; background-color: #fabce8; color: #884575; border-radius: 9px; padding: 0 5vw;
 display: flex; justify-content: space-between; align-items: center;
 transform: scale(1.2); opacity: 0;
 transition: all 400ms ease;
@@ -151,7 +151,7 @@ transition: all 400ms ease;
 	100% {transform: translateY(0%); opacity: 1;}
 }
 .radio-btn {
-width: 2vh; height: 2vh; border: solid 4px black; border-radius: 50%;
+width: 2vh; height: 2vh; border: solid 4px #884575; border-radius: 50%;
 }
 .warn {
 position: fixed;
@@ -200,7 +200,7 @@ $(".title").html("Completed");
 $(".fixed-img").attr("src","res/completed.png");	
 }
 var wishlistOpened = "de";
-$(".radio-" + wishlistOpened).css({backgroundColor:'black'});
+$(".radio-" + wishlistOpened).css({backgroundColor:'#884575'});
 
 var deleteOne = false;
 
@@ -246,7 +246,7 @@ $(".easy").click(function() {
 if (wishlistOpened != "de") {
 wishlistOpened = "de"; $(".nav-txt2").html("Easy");
 $(".radio-btn").css({backgroundColor:'transparent'});
-$(".radio-" + wishlistOpened).css({backgroundColor:'black'});
+$(".radio-" + wishlistOpened).css({backgroundColor:'#884575'});
 AppendAll();
 }
 });
@@ -254,7 +254,7 @@ $(".hard").click(function() {
 if (wishlistOpened != "dh") {
 wishlistOpened = "dh"; $(".nav-txt2").html("Hard");
 $(".radio-btn").css({backgroundColor:'transparent'});
-$(".radio-" + wishlistOpened).css({backgroundColor:'black'});
+$(".radio-" + wishlistOpened).css({backgroundColor:'#884575'});
 AppendAll();
 }
 });
