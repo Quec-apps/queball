@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="res/jquery.min.js"></script>
+	<title>Queball</title>
+<style>
+@font-face {
+	font-family: Roboto;
+	src: url(res/fonts/Roboto-Bold.ttf);
+}
+html {
+width: 100vw; height: 100vh; overflow: hidden;
+}
+body {
+width: 100vw; height: 100vh; overflow: hidden;
+margin: 0; font-family: Roboto;
+user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.back-img {
+width: 8vw; height: 8vw;
+position: fixed; top:1.5vh; left: 1.5vh;
+z-index: 10; transform: translateX(-20%); opacity: 0;
+transition: all 400ms ease;
+}
+.top {
+width: 100vw; height: 35vh;
+background-color: #befde5; border-radius: 0 0 10px 10px;
+display: flex; justify-content: center; align-items: center;
+position: relative; transform: translateY(-20%); opacity: 0;
+transition: all 400ms ease;
+}
+.play-img {
+width: 25vh; height: 25vh;
+position: absolute; top: 3vh; left: 10vw;
+opacity: .3;
+}
+.q_img-bg {
+width:30vh; height: 30vh; background-color: white; border-radius: 10px;
+position: relative; display: none; justify-content: center; align-items: center;
+}
+.q_img-txt {
+	width: 100%; text-align: center;
+	font-size: x-small; z-index: 1;
+	position: absolute; top:50%;
+}
+.q_img {
+max-width: 30vh; max-height: 30vh; border-radius: 10px;
+position: relative; top: 0; left: 0; z-index: 1;
+}
+.middle {
+width: 100vw; height: 55vh;
+transform: scale(1.2); opacity: 0;
+transition: all 400ms ease;
+}
+.question {
+width: 100vw; height: 15vh;
+font-size: 5vw; text-align: center;
+display: flex; align-items: center; justify-content: center;
+}
+.answer-bg {
+width: 100vw; height: 40vh;
+display: flex; flex-wrap: wrap; align-content: space-around; justify-content: space-evenly;
+}
+.ans {
+width:40vw; padding: 2vh 0;
+background-color: #fabce8; color: #4e2b44; border-radius: 10px;
+text-align: center;
+}
+
+.bottom {
+width: 100vw; height: 10vh;
+display: flex; justify-content: center; align-items: center;
+transform: scale(1.2); opacity: 0;
+transition: all 400ms ease;
+}
+#level {transform: translateX(50%);}
+
+.pop-con {
+width: 100vw; height: 100vh;
+position: fixed; top: 0; left: 0;
+display: none; justify-content: center; align-items: center;
+}
+.pop {
+width: 50vw; height: 30vw;
+background-color: rgb(33, 190, 35);
+border-radius: 10px;
+display: flex; justify-content: center; align-items: center;
+transform: scale(1.2); opacity: 0;
+animation: pop 900ms ease 1;
+} @keyframes pop {
+	0% {transform: scale(1.2); opacity: 0;}
+	40% {transform: scale(1); opacity: 1;}
+	60% {transform: scale(1); opacity: 1;}
+	100% {transform: scale(1.2); opacity: 0;}
+
+}
+.pop-img {
+width: 30vw; height: 30vw;
+}
+
+.finish-con {
+width: 100vw; height: 100vh;
+position: fixed; top: 0; left: 0; z-index: 11;
+display: none; justify-content: center; align-items: center;
+background-color: rgba(255, 255, 255, 1);
+animation:finish-con 800ms ease 1;
+} @keyframes finish-con {
+	0% {background-color:rgba(255, 255, 255, 0);}
+	100% {background-color:rgba(255, 255, 255, 1);}
+}
+.finish {
+width:90vw; height: 50vw; background-color: #befde5; border-radius: 10px; padding: 3vw 0;
+display: flex; flex-wrap: wrap; justify-content: center; align-content: space-evenly;
+animation: finish 400ms ease 1;
+transition: all 400ms ease;
+} @keyframes finish {
+	0% {transform: scale(1.2); opacity: 0;}
+	100% {transform: scale(1); opacity: 1;}
+}
+.txt2-bg {
+width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+}
+.finish-txt, .finish-txt2 {width: 100%; text-align: center; color:#55806f; font-size: xx-large;}
+.finish-txt2 {width: 50%; font-size: large;}
+.new-highscore {
+width: 100%;
+margin-top:3vw; display: none;
+}
+
+.back-img2 {
+width: 10vw; height: 10vw;
+}
+.button-bg {
+width: 100%; display: flex; justify-content: space-evenly; align-items: center;
+}
+.button-img {
+width: 15vw; height: 15vw;
+background-color: #fabce8; border-radius: 10px;
+}
+
+.active:active {
+transition: all 200ms ease;
+opacity: .4 !important;
+}
+
+.lives-bg {
+width: 16vw; height: 6vw;
+background-color: #fabce8; border-radius: 10px;
+position: fixed; top: 1.5vh; left: 80vw;
+display: flex; justify-content: space-between; align-items: center;
+z-index: 9; transform: scale(1.2); opacity: 0;
+transition: all 400ms ease;
+}
+.lives-img {
+width: 8vw; height: 8vw;
+transform: translateX(-15%);
+}
+.lives-img2 {
+width: 8vw; height: 8vw;
+}
+.lives {
+transform: translateX(-3vw);
+}
+.got-lives {
+display: none; justify-content: center; align-items: center;
+margin: 2vw 0;
+}
+</style>
+</head>
+<body>
+<img src="res/back-img.png" alt="" class="back-img active">
+<div class="lives-bg">
+<img src="res/lives.png" class="lives-img">
+<div class="lives">2</div>
+</div>
+<div class="top">
+    <img src="res/playing2.png" class="play-img">
+	<div class="q_img-bg">
+		<div class="q_img-txt">Image is loading</div>
+		<img src="res/poster.png" class="q_img">
+	</div>
+</div>
+<div class="middle">
+	<div class="question">Name above skill</div>
+	<div class="answer-bg">
+		<div class="ans ans1 active">The Mathews</div>
+		<div class="ans noans noans1 active">The Elastico</div>
+		<div class="ans noans noans2 active">Double Stepover</div>
+		<div class="ans noans noans3 active">Inside Outside</div>
+	</div>
+</div>
+<div class="bottom">Score  <span id="level"></span></div>
+<div class="pop-con">
+	<div class="pop">
+		<img src="res/completed2.png" class="pop-img">
+	</div>
+</div>
+<div class="finish-con">
+	<div class="finish">
+		<div class="finish-txt">GAME OVER</div>
+		<div class="txt2-bg">
+			<div class="finish-txt2">Your Score: <span class="span" id="score"></span></div>
+			<div class="finish-txt2">High Score: <span class="span" id="highScore"></span></div>
+			<div class="finish-txt2 new-highscore">New Highscore</div>
+			<div class="finish-txt2 got-lives"><img src="res/lives.png" class="lives-img2"> +1</div>
+		</div>
+		<div class="button-bg">
+			<img src="res/home.png" class="button-img home active">
+			<img src="res/reload.png" class="button-img reload active">
+		</div>
+	</div>
+</div>
+<script src="res/variables/loaded.js"></script>
+<script src="res/variables/quiz.js"></script>
+<script>
+setTimeout(() => {$(".top").css({transform:'translateY(0)', opacity:'1'}); $(".back-img").css({transform:'translateX(0)', opacity:'1'});}, 100);
+setTimeout(() => {$(".middle, .bottom, .lives-bg").css({transform:'scale(1)', opacity:'1'});}, 200);
+
+function Outro() {
+setTimeout(() => {$(".top").css({transform:'translateY(-20%)', opacity:'0'}); $(".back-img").css({transform:'translateX(-20%)', opacity:'0'});}, 100);
+setTimeout(() => {$(".middle, .bottom, .finish, .lives-bg").css({transform:'scale(1.2)', opacity:'0'});}, 200);
+}
+
+var highScore = localStorage.getItem("highScore");
+var lives = parseInt(localStorage.getItem("lives"));
+var score = 0;
+
+$(".lives").html(lives);
+
+function AppendAll() {
+x = Math.floor(Math.random() * q_total + 1);
+
+type = window["q_que_t_" + x]
+$(".question").html(window["q_que_" + x]);
+$(".ans").html(window["q_ans_" + x]);
+$(".noans1").html(window["q_noans1_" + x]);
+$(".noans2").html(window["q_noans2_" + x]);
+$(".noans3").html(window["q_noans3_" + x]);
+$("#level").html(score);
+$(function () {
+var parent = $(".answer-bg");
+var divs = parent.children();
+while (divs.length) {
+ parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+}
+});
+
+if (type == "image") {
+$(".q_img-bg").css({display:'flex'});
+$(".q_img").attr("src","quiz/" + x + ".jpg");	
+}
+}
+function AppendFunction() {
+if (isLoaded) {
+AppendAll();	
+} else {
+setTimeout(() => {AppendFunction();}, 1000);
+}
+}
+AppendFunction();
+
+$(".back-img, .home").click(function() {
+Outro();
+setTimeout(() => {window.history.back();}, 500);
+});
+
+$(".reload").click(function() {
+Outro();
+if (lives > 0) {
+setTimeout(() => {location.reload();}, 500);	
+} else {
+setTimeout(() => {parent.location="get_lives.html";}, 500);	
+}
+});
+
+var correctAns = false;
+function Correct() {
+correctAns = true; score ++;
+$(".q_img-bg").fadeOut();
+setTimeout(() => {AppendAll();}, 900);
+}
+
+function Wrong() {
+correctAns = false;
+livesRandom = Math.floor(Math.random() * 5 + 1);
+if (livesRandom == 1) {
+lives ++; localStorage.setItem("lives", lives);
+$(".got-lives").css({display:'flex'});
+} else {
+lives --; localStorage.setItem("lives", lives);
+}
+
+if (score > highScore) {
+	highScore = score;
+	localStorage.setItem("highScore", highScore);
+	$(".new-highscore").fadeIn();
+}
+$("#score").html(score); $("#highScore").html(highScore);
+setTimeout(() => {$(".finish-con").css({display:'flex'}); }, 400);
+}
+
+function Pop() {
+if (correctAns) {
+$(".pop").css({backgroundColor: 'rgb(33, 190, 35)'});
+$(".pop-img").attr("src","res/completed2.png");	
+} else {
+$(".pop").css({backgroundColor: 'rgb(255, 76, 30)'});
+$(".pop-img").attr("src","res/cancel2.png");	
+}
+$(".pop-con").css({display:'flex'});
+setTimeout(() => {$(".pop-con").css({display:'none'});}, 950);
+}
+
+
+$(".ans1").click(function() {
+Correct();
+Pop();
+});
+
+$(".noans").click(function() {
+Wrong();
+Pop();
+});
+</script>
+</body>
+</html>

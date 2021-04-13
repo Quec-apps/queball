@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+html, body {
+margin:0; width: 100vw; height: 100vh; overflow: hidden;
+font-family: sans-serif; font-weight: bolder;
+user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+}
+.top {
+width: 100vw; height: 20vh;
+display: flex; justify-content: center; align-items: center;
+font-size: 7vw;
+}
+.bottom {
+width: 100vw; height: 80vh;
+display: flex; justify-content: center; align-items: center;
+text-align: center; font-size: x-large;
+}
+.button {
+font-size: 7vw; padding: 3vh 3vw;
+background-color: #befde5; color: #55806f; border-radius: 10px;
+} .button:active {
+opacity: .4;
+}
+</style>
+<body>
+    <div class="top">Error!</div>
+    <div class="bottom"><div class="button" onclick="window.history.back();">REFRESH</div></div>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="res/jquery.min.js"></script>
+	<title>Queball</title>
+<style>
+@font-face {
+	font-family: Roboto;
+	src: url(res/fonts/Roboto-Bold.ttf);
+}
+html {
+width: 100vw; height: 100vh; overflow: hidden;
+}
+body {
+width: 100vw; height: 100vh; overflow: hidden;
+margin: 0; font-family: Roboto;
+user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+}
+.title-bg {
+width: 100vw; height: 10vh;
+display: flex; justify-content: space-around; align-items: center;
+}
+.title {
+width: 50%;
+margin-left: 5vw;
+font-size: 7vw;
+transition: all 400ms ease; transform: translateX(-20%); opacity: 0; 
+}
+.button-bg {
+width: 50%;
+display: flex; justify-content: space-evenly; align-items: center;
+}
+.button {
+width:6vh; height: 6vh; border-radius: 10px;
+background-color: #fabce8;
+transition: all 400ms ease; opacity: 0;
+}
+.completed {transform: translateX(-30%);}
+.wishlist {transform: translateX(30%);}
+
+.main-ct-bg {
+width: 100vw;
+height:60vh;
+display: flex; justify-content: space-evenly; align-items: center;
+}
+.ct {
+width:40vw; height:50vh; border-radius: 10px;
+transition: all 300ms ease; opacity: 0;
+color: #55806f; background-color: #befde5;
+}
+.ct1 {transform: translateX(-30%);}
+.ct2 {transform: translateX(30%);}
+.ct-title {
+width: 100%; height: 7vh;
+display: flex; justify-content: center; align-items: center;
+}
+.img-bg {
+position: relative;
+width: 100%; height: 43vh;
+display: flex; align-items: center;
+}
+.img {
+width: 100%; position: absolute;
+opacity: .4;
+}
+.img-ct1 {
+animation:ct1-1 4s ease 1;
+} @keyframes ct1-1 {
+	0%{transform: translateX(-30%); opacity: 0;}
+	100%{transform: translateX(0%);  opacity: .4;}
+}
+.img-ct2 {
+animation:ct1-2 5s ease 1;
+} @keyframes ct1-2 {
+	0%{transform: translateX(30%); opacity: 0;}
+	100%{transform: translateX(0%);  opacity: .4;}
+}
+
+
+
+.quiz-bg {
+width: 100vw; height: 30vh;
+display: flex; justify-content: center; align-items: center;
+}
+.quiz-ct {
+width: 90vw; height:25vh; border-radius: 10px;
+background-color: #f3f2f2; transform: translateY(20%); opacity: 0;
+transition: all 400ms ease;
+display: flex; flex-wrap: wrap; align-content: stretch;
+box-shadow: 0px 0px 11px #00000063;
+}
+.quiz-top {
+width: 100%; height: 13vh;
+display: flex; justify-content: space-evenly; align-items: center;
+}
+.button2 {
+width:40vw;
+padding: 2vh 0; text-align: center;
+border-radius: 10px; color: white;
+transition: all 400ms ease; transform: scale(0); opacity: 0;
+}
+.quiz-btm {
+width: 100%; text-align: center;
+font-size: 6vw;
+}
+.lives-bg-bg {
+width: 100%;
+display: flex; justify-content: center; align-items: center;
+}
+.lives-bg {
+width: 16vw; height: 6vw; 
+background-color: #fabce8; border-radius: 10px;
+display: flex; justify-content: space-between; align-items: center;
+z-index: 9; transform: scale(1.2); opacity: 0;
+transition: all 400ms ease;
+}
+.lives-img {
+width: 8vw; height: 8vw;
+transform: translateX(-15%);
+}
+.lives {
+transform: translateX(-3vw);
+}
+
+.active:active {
+transition: none;
+opacity: .6 !important;
+}
+.beta-txt {
+font-size: 3.6vw;
+}
+</style>
+</head>
+<body>
+<div class="title-bg">
+<div class="title">Queball<span class="beta-txt">(BETA)</span> </div>
+<div class="button-bg">
+	<img class="button completed active" src="res/completed.png">
+	<img class="button wishlist active" src="res/wishlist.png">
+</div>
+</div>
+<div class="main-ct-bg">
+<div class="ct ct1 active">
+	<div class="ct-title">Easy</div>
+	<div class="img-bg">
+		<img src="res/ct1-1.svg" class="img img-ct1">
+		<img src="res/ct1-2.svg" class="img img-ct2">
+	</div>
+</div>
+<div class="ct ct2 active">
+	<div class="ct-title">Hard</div>
+	<div class="img-bg">
+		<img src="res/ct2-1.svg" class="img img-ct1">
+		<img src="res/ct2-2.svg" class="img img-ct2">
+	</div>
+</div>
+</div>
+<div class="quiz-bg">
+<div class="quiz-ct">
+	<div class="quiz-top">
+		<div class="button2 play-quiz active" style="background-color: #21be23;">Play Quiz</div>
+	</div>
+	<div class="lives-bg-bg">
+		<div class="lives-bg">
+			<img src="res/lives.png" class="lives-img">
+			<div class="lives">2</div>
+		</div>
+	</div>
+	<div class="quiz-btm">
+		<div class="reached">Highscore: <span id="level"></span></div>
+	</div>
+</div>
+</div>
+
+<style>
+.beta-con {
+width: 100vw; height: 100vh;
+position: fixed; top: 0; left: 0;
+display: none; justify-content: center; align-items: center;
+background-color: rgba(0, 0, 0, .3);
+}
+.beta-ct {
+width: 80vw;
+padding: 2vh 3vw; border-radius: 10px;
+text-align: center; background-color: #befde5; color: #55806f;
+display: flex; flex-wrap: wrap; justify-content: center;
+animation: beta-ct 400ms ease 1; transition: all 400ms ease;
+} @keyframes beta-ct {
+0% {transform: scale(1.2); opacity: 0;}
+100% {transform: scale(1); opacity: 1;}
+}
+.beta-btn {
+margin-top: 2vh;
+width: 30vw; padding: 1vh 0; background-color: #21be23; color: white; 
+border-radius: 10px;
+}
+</style>
+<div class="beta-con">
+<div class="beta-ct">
+Skills and Quizes are limited in this beta version.<br/>
+Please write your feeback and suggestions to improve in full release.<br/>
+Thank You.
+<div class="beta-btn active">OK</div>
+<script>
+$(".beta-btn").click(function() {
+setTimeout(() => {
+$(".beta-ct").css({transform:'scale(1.2)', opacity:'0'});
+$(".beta-con").fadeOut();
+}, 100);
+});
+</script>
+</div>
+</div>
+
+<script src="res/variables/loaded.js"></script>
+<script>
+if (localStorage.getItem("de_opened") == null) {
+	localStorage.setItem("de_opened", 1); localStorage.setItem("dh_opened", 1);
+	localStorage.setItem("highScore", 0);
+	localStorage.setItem("lives", 10);
+	localStorage.setItem("inter", 0);
+	$(".beta-con").css({display:'flex'});
+}
+
+de_opened = parseInt(localStorage.getItem("de_opened"));
+dh_opened = parseInt(localStorage.getItem("dh_opened"));
+lives = parseInt(localStorage.getItem("lives")); $(".lives").html(lives);
+inter = localStorage.getItem("inter");
+highScore = parseInt(localStorage.getItem("highScore"));
+$("#level").html(highScore);
+
+setTimeout(() => {
+$(".ct, .button, .title").css({transform:'translateX(0)', opacity:'1'});
+$(".quiz-ct").css({transform:'translateY(0)', opacity:'1'});
+}, 100);
+setTimeout(() => {$(".play-quiz, .lives-bg").css({transform:'scale(1)', opacity:'1'});}, 400);
+setTimeout(() => {$(".reset-quiz").css({transform:'scale(1)', opacity:'1'});}, 600);
+
+
+function Outro() {
+setTimeout(() => {
+$(".ct1, .completed").css({transform:'translateX(-30%)', opacity:'0'});
+$(".ct2, .wishlist").css({transform:'translateX(30%)', opacity:'0'});
+$(".quiz-ct, .title").css({transform:'translateY(20%)', opacity:'0'});
+}, 100);
+}
+
+$(".ct, .button, .button2").click(function() {
+Outro();	
+});
+
+$(".ct1").click(function() {
+localStorage.setItem("opened", "de"); //de = dribbling easy
+setTimeout(() => {parent.location="ct.html"}, 450);
+});
+
+$(".ct2").click(function() {
+localStorage.setItem("opened", "dh"); //dh = dribbling hard
+setTimeout(() => {parent.location="ct.html"}, 450);
+});
+
+$(".play-quiz").click(function() {
+if (lives > 0) {
+setTimeout(() => {parent.location="quiz.html"}, 450);
+} else {
+setTimeout(() => {parent.location="get_lives.html";}, 450);
+}
+});
+
+$(".wishlist").click(function() {
+localStorage.setItem("saved", "w");
+setTimeout(() => {parent.location="saved.html";}, 500);
+});
+$(".completed").click(function() {
+localStorage.setItem("saved", "c");
+setTimeout(() => {parent.location="saved.html";}, 500);
+});
+
+$(".lives-bg").click(function() {
+Outro();
+setTimeout(() => {parent.location="get_lives.html";}, 500);
+});
+
+interIncrement = true;
+$(".ct, .play-quiz, .button").click(function() {
+if (interIncrement) {
+interIncrement = false; setTimeout(() => {interIncrement = true;}, 4000);
+inter ++; localStorage.setItem("inter", inter);
+}
+if (inter >= 7) {
+inter = 0; localStorage.setItem("inter", inter);
+setTimeout(() => {parent.location="https://inter"}, 500);
+}
+});
+</script>
+</body>
+</html>
