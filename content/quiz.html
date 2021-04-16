@@ -277,7 +277,7 @@ Outro();
 if (lives > 0) {
 setTimeout(() => {location.reload();}, 500);	
 } else {
-setTimeout(() => {parent.location="get_lives.html";}, 500);	
+setTimeout(() => {location.replace("get_lives.html");}, 500);	
 }
 });
 

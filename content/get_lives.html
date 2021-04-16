@@ -157,7 +157,7 @@ var lives = localStorage.getItem("lives");
 $(".lives").html(lives);
 $(".back-img").click(function() {
 Outro();
-setTimeout(() => {parent.location="menu.html";}, 500);
+setTimeout(() => { window.history.back(); }, 500);
 });
 
 $(".video-ad").click(function() {
