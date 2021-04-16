@@ -88,22 +88,6 @@ display: flex; justify-content: space-evenly; align-items: center;
 width: 8vw; height: 8vw;
 }
 
-.ct2, .ct3, .ct4 {
-opacity: .4;
-}
-
-.toast {
-width: 80%; margin-left: 10%;
-padding: 2vh 0;
-font-size: 15px; background-color: black; color: white;
-position: fixed; top: 80%;
-border-radius: 10px;
-text-align: center;
-justify-content: center; align-items: center;
-transition: all 400ms linear;
-display: none;
-}
-
 .active:active {
 transition: all 200ms ease;
 opacity: .6 !important;
@@ -134,7 +118,7 @@ opacity: .6 !important;
         <div class="ct-txt">
             <img src="res/lives.png" class="ct-img"> +10
         </div>
-        <div class="button buy active">
+        <div class="button buy buy1 active">
             Buy
         </div>
     </div>
@@ -143,7 +127,7 @@ opacity: .6 !important;
         <div class="ct-txt">
             <img src="res/lives.png" class="ct-img"> +20
         </div>
-        <div class="button buy active">
+        <div class="button buy buy2 active">
             Buy
         </div>
     </div>
@@ -152,13 +136,13 @@ opacity: .6 !important;
         <div class="ct-txt">
             <img src="res/lives.png" class="ct-img"> +50
         </div>
-        <div class="button buy active">
+        <div class="button buy buy3 active">
             Buy
         </div>
     </div>
 
 </div>
-<div class="toast">Purchase not available now</div>
+
 <script src="res/variables/loaded.js"></script>
 <script>
 setTimeout(() => {$(".title-bg").css({transform:'translateY(0)', opacity:'1'}); }, 100);
@@ -180,10 +164,16 @@ $(".video-ad").click(function() {
 setTimeout(() => {parent.location="https://reward";}, 200);
 });
 
-$(".buy").click(function() {
-setTimeout(() => {$(".toast").fadeIn();}, 200);
-setTimeout(() => {$(".toast").fadeOut();}, 1500);
+$(".buy1").click(function() {
+setTimeout(() => {parent.location="https://item1";}, 200);
 });
+$(".buy2").click(function() {
+setTimeout(() => {parent.location="https://item2";}, 200);
+});
+$(".buy3").click(function() {
+setTimeout(() => {parent.location="https://item3";}, 200);
+});
+
 
 setInterval(() => {
 lives = localStorage.getItem("lives");

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+var lives = parseInt(localStorage.getItem("lives"));
+lives += 20; localStorage.setItem("lives", lives);
+setTimeout(() => {window.history.back();}, 1000);
+</script>
+</body>
+</html>
