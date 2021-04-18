@@ -8,7 +8,6 @@ window["q_ans_" + Inc] = "Uruguay";
 window["q_noans1_" + Inc] = "Brazil";
 window["q_noans2_" + Inc] = "Argentina";
 window["q_noans3_" + Inc] = "Spain";
-window["q_noans4_" + Inc] = "France";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -17,7 +16,6 @@ window["q_ans_" + Inc] = "Brazil";
 window["q_noans1_" + Inc] = "Uruguay";
 window["q_noans2_" + Inc] = "Argentina";
 window["q_noans3_" + Inc] = "Spain";
-window["q_noans4_" + Inc] = "France";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -26,7 +24,6 @@ window["q_ans_" + Inc] = "1986";
 window["q_noans1_" + Inc] = "1990";
 window["q_noans2_" + Inc] = "1982";
 window["q_noans3_" + Inc] = "1985";
-window["q_noans4_" + Inc] = "1994";
 Inc ++;
 //4
 window["q_que_t_" + Inc] = "text";
@@ -35,7 +32,6 @@ window["q_ans_" + Inc] = "Miroslav Klose";
 window["q_noans1_" + Inc] = "Cristiano Ronaldo";
 window["q_noans2_" + Inc] = "Lionel Messi";
 window["q_noans3_" + Inc] = "Paul Paugba";
-window["q_noans4_" + Inc] = "Neymar";
 Inc ++;
 //5
 window["q_que_t_" + Inc] = "text";
@@ -44,7 +40,6 @@ window["q_ans_" + Inc] = "Franz Beckenbauer";
 window["q_noans1_" + Inc] = "Zinedine Zidane";
 window["q_noans2_" + Inc] = "José Mourinho";
 window["q_noans3_" + Inc] = "Pep Guardiola";
-window["q_noans4_" + Inc] = "Louis van Gaal";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -53,7 +48,6 @@ window["q_ans_" + Inc] = "Stefan Schwarz";
 window["q_noans1_" + Inc] = "Anders Svensson";
 window["q_noans2_" + Inc] = "Thomas Ravelli";
 window["q_noans3_" + Inc] = "Henrik Larsson";
-window["q_noans4_" + Inc] = "Zlatan Ibrahimović";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -62,7 +56,6 @@ window["q_ans_" + Inc] = "Cristiano Ronaldo";
 window["q_noans1_" + Inc] = "Lionel Messi";
 window["q_noans2_" + Inc] = "Luka Modric";
 window["q_noans3_" + Inc] = "Fabio Cannavaro";
-window["q_noans4_" + Inc] = "Ronaldinho";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -71,7 +64,6 @@ window["q_ans_" + Inc] = "Tim Wiese";
 window["q_noans1_" + Inc] = "Thomas Müller";
 window["q_noans2_" + Inc] = "Bastian Schweinsteiger";
 window["q_noans3_" + Inc] = "Timo Werner";
-window["q_noans4_" + Inc] = "Serge Gnabry";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -80,7 +72,6 @@ window["q_ans_" + Inc] = "Andre Villas-Boas";
 window["q_noans1_" + Inc] = "Martin Jol";
 window["q_noans2_" + Inc] = "Mauricio Pochettino";
 window["q_noans3_" + Inc] = "José Mourinho";
-window["q_noans4_" + Inc] = "Bill Nicholson";
 Inc ++;
 //10
 window["q_que_t_" + Inc] = "text";
@@ -89,7 +80,6 @@ window["q_ans_" + Inc] = "Cristiano Ronaldo";
 window["q_noans1_" + Inc] = "Fabio Cannavaro";
 window["q_noans2_" + Inc] = "Ronaldinho";
 window["q_noans3_" + Inc] = "Bastian Schweinsteiger";
-window["q_noans4_" + Inc] = "Neymar";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -98,7 +88,6 @@ window["q_ans_" + Inc] = "Atletico Madrid";
 window["q_noans1_" + Inc] = "Barcelona";
 window["q_noans2_" + Inc] = "Real Madrid";
 window["q_noans3_" + Inc] = "Sevilla";
-window["q_noans4_" + Inc] = "Real Sociedad";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -107,7 +96,6 @@ window["q_ans_" + Inc] = "Watford";
 window["q_noans1_" + Inc] = "Norwich City";
 window["q_noans2_" + Inc] = "Brentford";
 window["q_noans3_" + Inc] = "Millwall";
-window["q_noans4_" + Inc] = "Stoke City";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -116,7 +104,6 @@ window["q_ans_" + Inc] = "No.9";
 window["q_noans1_" + Inc] = "No.5";
 window["q_noans2_" + Inc] = "No.2";
 window["q_noans3_" + Inc] = "No.10";
-window["q_noans4_" + Inc] = "No.29";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -125,7 +112,6 @@ window["q_ans_" + Inc] = "No.19";
 window["q_noans1_" + Inc] = "No.7";
 window["q_noans2_" + Inc] = "No.1";
 window["q_noans3_" + Inc] = "No.11";
-window["q_noans4_" + Inc] = "No.17";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -134,7 +120,6 @@ window["q_ans_" + Inc] = "Madeira";
 window["q_noans1_" + Inc] = "Cape Verde";
 window["q_noans2_" + Inc] = "Pico";
 window["q_noans3_" + Inc] = "Terceira Island";
-window["q_noans4_" + Inc] = "Flores";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -143,7 +128,6 @@ window["q_ans_" + Inc] = "2016";
 window["q_noans1_" + Inc] = "2015";
 window["q_noans2_" + Inc] = "2014";
 window["q_noans3_" + Inc] = "2013";
-window["q_noans4_" + Inc] = "2012";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -152,7 +136,6 @@ window["q_ans_" + Inc] = "Adidas";
 window["q_noans1_" + Inc] = "Nike";
 window["q_noans2_" + Inc] = "Puma";
 window["q_noans3_" + Inc] = "Skechers";
-window["q_noans4_" + Inc] = "Asics";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -161,7 +144,6 @@ window["q_ans_" + Inc] = "Real Madrid";
 window["q_noans1_" + Inc] = "Atletico Madrid";
 window["q_noans2_" + Inc] = "B Dortmund";
 window["q_noans3_" + Inc] = "Barcelona";
-window["q_noans4_" + Inc] = "Juventus";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -170,7 +152,6 @@ window["q_ans_" + Inc] = "Clarence Seedorf";
 window["q_noans1_" + Inc] = "Felix Correia";
 window["q_noans2_" + Inc] = "Mariano";
 window["q_noans3_" + Inc] = "Oscar Aranda";
-window["q_noans4_" + Inc] = "Thomas Lemar";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -179,7 +160,6 @@ window["q_ans_" + Inc] = "1992-93";
 window["q_noans1_" + Inc] = "1991-92";
 window["q_noans2_" + Inc] = "1993-94";
 window["q_noans3_" + Inc] = "1994-95";
-window["q_noans4_" + Inc] = "1995-96";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -188,7 +168,6 @@ window["q_ans_" + Inc] = "Celtic";
 window["q_noans1_" + Inc] = "Rangers";
 window["q_noans2_" + Inc] = "Livingston";
 window["q_noans3_" + Inc] = "Hibernian";
-window["q_noans4_" + Inc] = "Motherwell";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -197,7 +176,6 @@ window["q_ans_" + Inc] = "Cristiano Ronaldo";
 window["q_noans1_" + Inc] = "Lionel Messi";
 window["q_noans2_" + Inc] = "Karim Benzema";
 window["q_noans3_" + Inc] = "Paulo Dybala";
-window["q_noans4_" + Inc] = "Luka Modric";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -206,7 +184,6 @@ window["q_ans_" + Inc] = "Francisco Gento";
 window["q_noans1_" + Inc] = "Federico Valverde";
 window["q_noans2_" + Inc] = "Antonio Blanco";
 window["q_noans3_" + Inc] = "Angel Correa";
-window["q_noans4_" + Inc] = "Luis Suarez";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -215,7 +192,6 @@ window["q_ans_" + Inc] = "Ryan Giggs";
 window["q_noans1_" + Inc] = "Daouda Peeters";
 window["q_noans2_" + Inc] = "Kwang Song Han";
 window["q_noans3_" + Inc] = "Marcelo";
-window["q_noans4_" + Inc] = "Casemiro";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -224,7 +200,6 @@ window["q_ans_" + Inc] = "1960";
 window["q_noans1_" + Inc] = "1959";
 window["q_noans2_" + Inc] = "1958";
 window["q_noans3_" + Inc] = "1957";
-window["q_noans4_" + Inc] = "1961";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -233,7 +208,6 @@ window["q_ans_" + Inc] = "Henri Delaunay Trophy";
 window["q_noans1_" + Inc] = "Stanley Cup";
 window["q_noans2_" + Inc] = "Vince Lombardi Trophy";
 window["q_noans3_" + Inc] = "Heisman Trophy";
-window["q_noans4_" + Inc] = "Harley J. Earl Trophy";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
@@ -263,105 +237,97 @@ Inc ++;
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "Denmark notably won Euro 92, despite the fact that they did not initially qualify. Which team did they replace?";
 window["q_ans_" + Inc] = "Yugoslavia";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
+window["q_noans1_" + Inc] = "France";
+window["q_noans2_" + Inc] = "England";
+window["q_noans3_" + Inc] = "Scotland";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "In which year did the European Championship expand from 16 teams to 24 teams?";
 window["q_ans_" + Inc] = "2016";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
+window["q_noans1_" + Inc] = "2015";
+window["q_noans2_" + Inc] = "2017";
+window["q_noans3_" + Inc] = "2014";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "Only one person has won the European Championship as a player and as manager. Can you name them?";
 window["q_ans_" + Inc] = "Berti Vogts";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
+window["q_noans1_" + Inc] = "Vicente del Bosque";
+window["q_noans2_" + Inc] = "Rinus Michels";
+window["q_noans3_" + Inc] = "Otto Rehhagel";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "I made my international debut for Brazil in 1993 and scored in the game. I played in two World Cup finals and my club career saw me play in Brazil, Italy, Angola, Spain, Greece and Uzbekistan.";
 window["q_ans_" + Inc] = "Rivaldo";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
+window["q_noans1_" + Inc] = "Mats Hummels";
+window["q_noans2_" + Inc] = "Antonio Blanco";
+window["q_noans3_" + Inc] = "Diego Altube";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "I've played in Germany, Italy, Austria and France. I have won Serie A and scored the first ever Golden Goal in international football.";
 window["q_ans_" + Inc] = "Oliver Bierhoff";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
+window["q_noans1_" + Inc] = "Pedri";
+window["q_noans2_" + Inc] = "Davide De Marino";
+window["q_noans3_" + Inc] = "Martin Braithwaite";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "I have played in the Conference, League Two, League One, Championship, Premier League, the UEFA Cup, Champions League and the World Cup.";
 window["q_ans_" + Inc] = "Steve Finnan";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
+window["q_noans1_" + Inc] = "Thomas Meunier";
+window["q_noans2_" + Inc] = "Felix Passlack";
+window["q_noans3_" + Inc] = "Alaa Bakir";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "I was the first Liverpool player to win the Ballon d'Or. I scored 40 goals for my country and have played in England and Spain.";
 window["q_ans_" + Inc] = "Michael Owen";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
+window["q_noans1_" + Inc] = "Emre Aydinel";
+window["q_noans2_" + Inc] = "Eden Hazard";
+window["q_noans3_" + Inc] = "Trincao";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "I was originally a striker before becoming a defender. I played 11 seasons for the same club before managing them. I've won two Bundesliga titles and a Champions League.";
 window["q_ans_" + Inc] = "Jurgen Klopp";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
+window["q_noans1_" + Inc] = "José Mourinho";
+window["q_noans2_" + Inc] = "Pep Guardiola";
+window["q_noans3_" + Inc] = "Alex Ferguson";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "I have played for Chelsea and spent time playing in Turkey. I've been crowned African Footballer of the Year four times and the Africa Cup of Nations twice.";
 window["q_ans_" + Inc] = "Samuel Eto'o";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
+window["q_noans1_" + Inc] = "Samuel Umtiti";
+window["q_noans2_" + Inc] = "Toni Kroos";
+window["q_noans3_" + Inc] = "Felix Passlack";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = " I have won league titles in Italy, Germany, Portugal and Austria. I also won the European Cup both as a player and as a manager.";
 window["q_ans_" + Inc] = "Giovanni Trapattoni";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
+window["q_noans1_" + Inc] = "Angel Correa";
+window["q_noans2_" + Inc] = "Jadon Sancho";
+window["q_noans3_" + Inc] = "Tim Sechelmann";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "I am the manager who first named David Beckham as England captain.";
 window["q_ans_" + Inc] = "Peter Taylor";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
+window["q_noans1_" + Inc] = "Harry Kane";
+window["q_noans2_" + Inc] = "Steven Gerrard";
+window["q_noans3_" + Inc] = "Tony Adams";
 Inc ++;
 
 window["q_que_t_" + Inc] = "text";
 window["q_que_" + Inc] = "I've won the World Cup and European Championship at international level and I won the Champions League on two occasions as manager of two different clubs.";
 window["q_ans_" + Inc] = "Jupp Heynckes";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
+window["q_noans1_" + Inc] = "Vicente del Bosque";
+window["q_noans2_" + Inc] = "Jock Stein";
+window["q_noans3_" + Inc] = "Michel Hidalgo";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -370,7 +336,6 @@ window["q_ans_" + Inc] = "Gianluigi Buffon";
 window["q_noans1_" + Inc] = "Franco Israel";
 window["q_noans2_" + Inc] = "Wojciech Szczęsny";
 window["q_noans3_" + Inc] = "Leonardo Bonucci";
-window["q_noans4_" + Inc] = "Giovanni Garofani";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -379,7 +344,6 @@ window["q_ans_" + Inc] = "Giovanni Garofani";
 window["q_noans1_" + Inc] = "Gianluigi Buffon";
 window["q_noans2_" + Inc] = "Franco Israel";
 window["q_noans3_" + Inc] = "Wojciech Szczęsny";
-window["q_noans4_" + Inc] = "Leonardo Bonucci";
 Inc ++;
 //44
 window["q_que_t_" + Inc] = "image";
@@ -388,7 +352,6 @@ window["q_ans_" + Inc] = "Franco Israel";
 window["q_noans1_" + Inc] = "Matthijs de Ligt";
 window["q_noans2_" + Inc] = "Alessandro Di Pardo";
 window["q_noans3_" + Inc] = "Giorgio Chiellini";
-window["q_noans4_" + Inc] = "Arthur";
 Inc ++;
 //45
 window["q_que_t_" + Inc] = "image";
@@ -397,7 +360,6 @@ window["q_ans_" + Inc] = "Carlo Pinsoglio";
 window["q_noans1_" + Inc] = "Leonardo Bonucci";
 window["q_noans2_" + Inc] = "Giorgio Chiellini";
 window["q_noans3_" + Inc] = "Matthijs de Ligt";
-window["q_noans4_" + Inc] = "Alessandro Di Pardo";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -406,7 +368,6 @@ window["q_ans_" + Inc] = "Wojciech Szczęsny";
 window["q_noans1_" + Inc] = "Riccardo Capellini";
 window["q_noans2_" + Inc] = "Juan Cuadrado";
 window["q_noans3_" + Inc] = "Matthijs de Ligt";
-window["q_noans4_" + Inc] = "Rodrigo Bentancur";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -415,7 +376,6 @@ window["q_ans_" + Inc] = "Alex Sandro";
 window["q_noans1_" + Inc] = "Carlo Pinsoglio";
 window["q_noans2_" + Inc] = "Federico Bernardeschi";
 window["q_noans3_" + Inc] = "Alessandro Riccio";
-window["q_noans4_" + Inc] = "Radu Drăgușin";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -424,7 +384,6 @@ window["q_ans_" + Inc] = "Leonardo Bonucci";
 window["q_noans1_" + Inc] = "Juan Cuadrado";
 window["q_noans2_" + Inc] = "Gianluca Frabotta";
 window["q_noans3_" + Inc] = "Rodrigo Bentancur";
-window["q_noans4_" + Inc] = "Franco Israel";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -433,7 +392,6 @@ window["q_ans_" + Inc] = "Hamza Rafia";
 window["q_noans1_" + Inc] = "Gianluca Frabotta";
 window["q_noans2_" + Inc] = "Arthur";
 window["q_noans3_" + Inc] = "Filippo Ranocchia";
-window["q_noans4_" + Inc] = "Luca Coccolo";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -442,7 +400,6 @@ window["q_ans_" + Inc] = "Stefano Gori";
 window["q_noans1_" + Inc] = "Gianluca Frabotta";
 window["q_noans2_" + Inc] = "Arthur";
 window["q_noans3_" + Inc] = "Filippo Ranocchia";
-window["q_noans4_" + Inc] = "Hamza Rafia";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -451,7 +408,6 @@ window["q_ans_" + Inc] = "Giorgio Chiellini";
 window["q_noans1_" + Inc] = "Filippo Ranocchia";
 window["q_noans2_" + Inc] = "Eder Militao";
 window["q_noans3_" + Inc] = "Andriy Lunin";
-window["q_noans4_" + Inc] = "Daouda Peeters";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -460,7 +416,6 @@ window["q_ans_" + Inc] = "Matthijs de Ligt";
 window["q_noans1_" + Inc] = "Juan Guillermo Cuadrado";
 window["q_noans2_" + Inc] = "Pietro Beruatto";
 window["q_noans3_" + Inc] = "Koni de Winter";
-window["q_noans4_" + Inc] = "Hamza Rafia";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -469,7 +424,6 @@ window["q_ans_" + Inc] = "Danilo";
 window["q_noans1_" + Inc] = "Merih Demiral";
 window["q_noans2_" + Inc] = "Weston McKennie";
 window["q_noans3_" + Inc] = "Koni de Winter";
-window["q_noans4_" + Inc] = "Daouda Peeters";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -478,7 +432,6 @@ window["q_ans_" + Inc] = "Juan Guillermo Cuadrado";
 window["q_noans1_" + Inc] = "Pietro Beruatto";
 window["q_noans2_" + Inc] = "Luca Coccolo";
 window["q_noans3_" + Inc] = "Weston McKennie";
-window["q_noans4_" + Inc] = "Koni de Winter";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -487,7 +440,6 @@ window["q_ans_" + Inc] = "Merih Demiral";
 window["q_noans1_" + Inc] = "Danilo";
 window["q_noans2_" + Inc] = "Radu Dragusin";
 window["q_noans3_" + Inc] = "Aaron Ramsey";
-window["q_noans4_" + Inc] = "Adrien Rabiot";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -496,7 +448,6 @@ window["q_ans_" + Inc] = "Radu Dragusin";
 window["q_noans1_" + Inc] = "Luca Coccolo";
 window["q_noans2_" + Inc] = "Weston McKennie";
 window["q_noans3_" + Inc] = "Alessandro Di Pardo";
-window["q_noans4_" + Inc] = "Paulo Dybala";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -505,7 +456,6 @@ window["q_ans_" + Inc] = "Gianluca Frabotta";
 window["q_noans1_" + Inc] = "Danilo";
 window["q_noans2_" + Inc] = "Aaron Ramsey";
 window["q_noans3_" + Inc] = "Cosimo Marco Da Graca";
-window["q_noans4_" + Inc] = "Kwang Song Han";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -514,7 +464,6 @@ window["q_ans_" + Inc] = "Luca Coccolo";
 window["q_noans1_" + Inc] = "Juan Guillermo Cuadrado";
 window["q_noans2_" + Inc] = "Radu Dragusin";
 window["q_noans3_" + Inc] = "Adrien Rabiot";
-window["q_noans4_" + Inc] = "Daouda Peeters";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -523,7 +472,6 @@ window["q_ans_" + Inc] = "Alessandro Pio Riccio";
 window["q_noans1_" + Inc] = "Matthijs de Ligt";
 window["q_noans2_" + Inc] = "Koni de Winter";
 window["q_noans3_" + Inc] = "Alvaro Morata";
-window["q_noans4_" + Inc] = "Federico Chiesa";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -532,7 +480,6 @@ window["q_ans_" + Inc] = "Riccardo Capellini";
 window["q_noans1_" + Inc] = "Aaron Ramsey";
 window["q_noans2_" + Inc] = "Rodrigo Bentancur";
 window["q_noans3_" + Inc] = "Lucas Vazquez";
-window["q_noans4_" + Inc] = "Mariano";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -541,7 +488,6 @@ window["q_ans_" + Inc] = "Arthur";
 window["q_noans1_" + Inc] = "Gianluca Frabotta";
 window["q_noans2_" + Inc] = "Alvaro Morata";
 window["q_noans3_" + Inc] = "Giacomo Vrioni";
-window["q_noans4_" + Inc] = "Ferland Mendy";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -550,7 +496,6 @@ window["q_ans_" + Inc] = "Aaron Ramsey";
 window["q_noans1_" + Inc] = "Hamza Rafia";
 window["q_noans2_" + Inc] = "Federico Chiesa";
 window["q_noans3_" + Inc] = "Giorgio Chiellini";
-window["q_noans4_" + Inc] = "Alessandro Di Pardo";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -559,7 +504,6 @@ window["q_ans_" + Inc] = "Weston McKennie";
 window["q_noans1_" + Inc] = "Lucas Vazquez";
 window["q_noans2_" + Inc] = "Oscar Castro";
 window["q_noans3_" + Inc] = "Marcos Llorente";
-window["q_noans4_" + Inc] = "Emir Terzi";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -568,7 +512,6 @@ window["q_ans_" + Inc] = "Adrien Rabiot";
 window["q_noans1_" + Inc] = "Luca Coccolo";
 window["q_noans2_" + Inc] = "Weston McKennie";
 window["q_noans3_" + Inc] = "Marley Ake";
-window["q_noans4_" + Inc] = "Filippo Ranocchia";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -577,7 +520,6 @@ window["q_ans_" + Inc] = "Rodrigo Bentancur";
 window["q_noans1_" + Inc] = "Koni de Winter";
 window["q_noans2_" + Inc] = "Federico Bernardeschi";
 window["q_noans3_" + Inc] = "Felix Correia";
-window["q_noans4_" + Inc] = "Federico Chiesa";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -586,7 +528,6 @@ window["q_ans_" + Inc] = "Koni de Winter";
 window["q_noans1_" + Inc] = "Filippo Ranocchia";
 window["q_noans2_" + Inc] = "Alessandro Di Pardo";
 window["q_noans3_" + Inc] = "Merih Demiral";
-window["q_noans4_" + Inc] = "Eder Militao";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -595,7 +536,6 @@ window["q_ans_" + Inc] = "Alessandro Di Pardo";
 window["q_noans1_" + Inc] = "Arthur";
 window["q_noans2_" + Inc] = "Luca Coccolo";
 window["q_noans3_" + Inc] = "Lucas Vazquez";
-window["q_noans4_" + Inc] = "Rodrygo";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -604,7 +544,6 @@ window["q_ans_" + Inc] = "Daouda Peeters";
 window["q_noans1_" + Inc] = "Arthur ";
 window["q_noans2_" + Inc] = "Merih Demiral";
 window["q_noans3_" + Inc] = "Gianluca Frabotta";
-window["q_noans4_" + Inc] = "Federico Chiesa";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -613,7 +552,6 @@ window["q_ans_" + Inc] = "Filippo Ranocchia";
 window["q_noans1_" + Inc] = "Radu Dragusin";
 window["q_noans2_" + Inc] = "Diego Altube";
 window["q_noans3_" + Inc] = "Eder Militao";
-window["q_noans4_" + Inc] = "Marvin Park";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -622,7 +560,6 @@ window["q_ans_" + Inc] = "Cristiano Ronaldo";
 window["q_noans1_" + Inc] = "Alvaro Morata";
 window["q_noans2_" + Inc] = "Isco";
 window["q_noans3_" + Inc] = "Oscar Aranda";
-window["q_noans4_" + Inc] = "Sergio Ramos";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -631,7 +568,6 @@ window["q_ans_" + Inc] = "Alvaro Morata";
 window["q_noans1_" + Inc] = "Paulo Dybala";
 window["q_noans2_" + Inc] = "Arthur ";
 window["q_noans3_" + Inc] = "Marley Ake";
-window["q_noans4_" + Inc] = "Ferland Mendy";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -640,7 +576,6 @@ window["q_ans_" + Inc] = "Paulo Dybala";
 window["q_noans1_" + Inc] = "Nicolo Fagioli";
 window["q_noans2_" + Inc] = "Victor Chust";
 window["q_noans3_" + Inc] = "Toni Kroos";
-window["q_noans4_" + Inc] = "Daniel Carvajal";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -649,7 +584,6 @@ window["q_ans_" + Inc] = "Federico Chiesa";
 window["q_noans1_" + Inc] = "Federico Bernardeschi";
 window["q_noans2_" + Inc] = "Radu Dragusin";
 window["q_noans3_" + Inc] = "Lucas Canizares";
-window["q_noans4_" + Inc] = "Casemiro";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -658,7 +592,6 @@ window["q_ans_" + Inc] = "Federico Bernardeschi";
 window["q_noans1_" + Inc] = "Federico Chiesa";
 window["q_noans2_" + Inc] = "Felix Correia";
 window["q_noans3_" + Inc] = "Andriy Lunin";
-window["q_noans4_" + Inc] = "Nacho Fernandez";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -667,7 +600,6 @@ window["q_ans_" + Inc] = "Cosimo Marco Da Graca";
 window["q_noans1_" + Inc] = "Alvaro Morata";
 window["q_noans2_" + Inc] = "Rodrigo Bentancur";
 window["q_noans3_" + Inc] = "Sergio Santos";
-window["q_noans4_" + Inc] = "Felipe";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -676,7 +608,6 @@ window["q_ans_" + Inc] = "Kwang Song Han";
 window["q_noans1_" + Inc] = "Alejandro Marques";
 window["q_noans2_" + Inc] = "Marco Asensio";
 window["q_noans3_" + Inc] = "Vitolo";
-window["q_noans4_" + Inc] = "Roman Burki";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -685,7 +616,6 @@ window["q_ans_" + Inc] = "Giacomo Vrioni";
 window["q_noans1_" + Inc] = "Nicolo Fagioli";
 window["q_noans2_" + Inc] = "Weston McKennie";
 window["q_noans3_" + Inc] = "Marco Asensio";
-window["q_noans4_" + Inc] = "Jan Oblak";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -694,7 +624,6 @@ window["q_ans_" + Inc] = "Nicolo Fagioli";
 window["q_noans1_" + Inc] = "Diego Altube";
 window["q_noans2_" + Inc] = "Stefan Savic";
 window["q_noans3_" + Inc] = "Sergio Camello";
-window["q_noans4_" + Inc] = "Mateu Morey";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -703,7 +632,6 @@ window["q_ans_" + Inc] = "Felix Correia";
 window["q_noans1_" + Inc] = "Koni de Winter";
 window["q_noans2_" + Inc] = "Daouda Peeters";
 window["q_noans3_" + Inc] = "Eder Militao";
-window["q_noans4_" + Inc] = "Federico Valverde";
 Inc ++;
 //80
 window["q_que_t_" + Inc] = "image";
@@ -712,7 +640,6 @@ window["q_ans_" + Inc] = "Alejandro Marques";
 window["q_noans1_" + Inc] = "Rodrigo Bentancur";
 window["q_noans2_" + Inc] = "Raphael Varane";
 window["q_noans3_" + Inc] = "Marco Asensio";
-window["q_noans4_" + Inc] = "Vinicius Junior";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -721,7 +648,6 @@ window["q_ans_" + Inc] = "Marley Ake";
 window["q_noans1_" + Inc] = "Filippo Ranocchia";
 window["q_noans2_" + Inc] = "Felix Correia";
 window["q_noans3_" + Inc] = "Eder Militao";
-window["q_noans4_" + Inc] = "Hugo Duro";
 Inc ++;
 
 window["q_que_t_" + Inc] = "image";
@@ -730,161 +656,9 @@ window["q_ans_" + Inc] = "";
 window["q_noans1_" + Inc] = "";
 window["q_noans2_" + Inc] = "";
 window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
 Inc ++;
 
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
 
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
-
-window["q_que_t_" + Inc] = "image";
-window["q_que_" + Inc] = player;
-window["q_ans_" + Inc] = "";
-window["q_noans1_" + Inc] = "";
-window["q_noans2_" + Inc] = "";
-window["q_noans3_" + Inc] = "";
-window["q_noans4_" + Inc] = "";
-Inc ++;
 
 
 
