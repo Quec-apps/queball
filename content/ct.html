@@ -8,15 +8,16 @@
 	<title>Queball</title>
 <style>
 @font-face {
-	font-family: Roboto;
-	src: url(res/fonts/Roboto-Bold.ttf);
+	font-family: Din-bold;
+	src: url(res/fonts/din_bold.ttf);
 }
 html {
 width: 100vw; height: 100vh; overflow: hidden;
 }
 body {
 width: 100vw; height: 100vh; overflow: hidden;
-margin: 0; font-family: Roboto;
+margin: 0; font-family: Din-bold;
+color: #afafaf;
 user-select: none; /* supported by Chrome and Opera */
 -webkit-user-select: none; /* Safari */
 -khtml-user-select: none; /* Konqueror HTML */
@@ -24,12 +25,6 @@ user-select: none; /* supported by Chrome and Opera */
 -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-.playing {
-width: 100vw; 
-position: fixed; top:4vh; opacity: 0;
-transition: all 400ms ease;
-transform: translateY(-10%);
-}
 .title-bg {
 width: 100vw; height: 10vh;
 display: flex; align-items: center;
@@ -50,7 +45,7 @@ display: flex; align-items: center;
 display: flex; justify-content: space-evenly; align-items: center;
 }
 .nav-img {
-width:13vw; height: 13vw; background-color: #fabce8;
+width:13vw; height: 13vw; background-color: #1cb0f6; box-shadow: .5vw 1vw 0 #1898d5;
 border-radius: 10px;
 transition: all 400ms ease; transform: translateY(-20%); opacity: 0; 
 }
@@ -60,7 +55,7 @@ width: 100vw; height: 45vh;
 display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
 }
 .ct-title {
-width: 100vw; padding-left: 5vw; font-size: 5vw;
+width: 100vw; padding-left: 5vw; font-size: 6.5vw;
 transition: all 400ms ease; transform: translateX(-10%); opacity: 0; 
 }
 .video {
@@ -73,26 +68,27 @@ display: flex; flex-wrap: wrap; align-items: center;
 transition: all 400ms ease; transform: translateX(-10%); opacity: 0; 
 }
 .credit {
-width: 100vw; margin-left: 5vw;
+width: 100vw; margin-left: 5vw; font-size: 6vw;
 }
 .tutorial-bg {
 width: 100vw; display: flex; align-items: center;
 }
 .tutorial {
-background-color: #fabce8; border-radius: 10px; padding: 2vh 7vw;
-margin-left: 5vw; color: #543f4e;
+background-color: #1cb0f6; border-radius: 10px; padding: 2vh 7vw;
+margin-left: 5vw; color: white; box-shadow: .5vw 1vw 0 #1898d5;
+font-size: 5.5vw;
 }
 .slomo {
-width: 13vw; height: 13vw; background-color: #fabce8; border-radius: 10px;
-margin-left: 4vw;
+width: 14vw; height: 14vw; background-color: #1cb0f6; border-radius: 10px;
+margin-left: 4vw; box-shadow: .5vw 1vw 0 #1898d5;
 }
 
 .navigate-bg {
 width: 100vw; height: 16vh; display: flex; justify-content: space-around; align-items: center;
 }
 .navigate-img {
-width: 13vw; height: 13vw; background-color: #fabce8; border-radius: 10px;
-transition: all 400ms ease; opacity: 0; 
+width: 16vw; height: 16vw; background-color: #1cb0f6; border-radius: 10px;
+transition: all 400ms ease; opacity: 0;  box-shadow: .5vw 1vw 0 #1898d5;
 }
 .prev {transform: translateX(-20%);}
 .next {transform: translateX(20%);}
@@ -109,13 +105,14 @@ display: none;
 }
 
 .active:active {
-transition: all 200ms ease;
-opacity: .6 !important;
+transition: none;
+box-shadow: none !important;
+transform: translateX(1vw) !important;
+transform: translateY(.5vw) !important;
 }
 </style>
 </head>
 <body>
-	<img src="res/playing.png" class="playing">
 <div class="title-bg">
 	<img src="res/back-img.png" alt="" class="back-img active">
 	<div class="title">Easy</div>
@@ -188,22 +185,18 @@ TutorialLink = window["" + opened + "_l" + opened_number + ""];
 
 if (localStorage.getItem("" + opened + "_c" + opened_number + "") == null) { //c = completed
 completedCheck = false;
-$(".completed").css({backgroundColor:'#fabce8'});
-$(".completed").attr("src","res/completed.png");	
+$(".completed").css({backgroundColor:'#1cb0f6', boxShadow:'.5vw 1vw 0 #1898d5'});
 } else {
 completedCheck = true;
-$(".completed").css({backgroundColor:'#21be23'});
-$(".completed").attr("src","res/completed2.png");	
+$(".completed").css({backgroundColor:'#21be23', boxShadow:'.5vw 1vw 0 #52a71c'});
 }
 
 if (localStorage.getItem("" + opened + "_w" + opened_number + "") == null) { //w = wishlist
 wishlistCheck = false;
-$(".wishlist").css({backgroundColor:'#fabce8'});
-$(".wishlist").attr("src","res/wishlist.png");	
+$(".wishlist").css({backgroundColor:'#1cb0f6', boxShadow:'.5vw 1vw 0 #1898d5'});
 } else {
 wishlistCheck = true;
-$(".wishlist").css({backgroundColor:'#ff526c'});
-$(".wishlist").attr("src","res/wishlist2.png");	
+$(".wishlist").css({backgroundColor:'#ff526c', boxShadow:'.5vw 1vw 0 #df526c'});
 }
 
 }
@@ -233,7 +226,7 @@ if (slomo) {
 	var vid = document.getElementById("video");
 	vid.playbackRate = 1;
 	slomo = false;
-	$(".slomo").css({backgroundColor:'#fabce8'});
+	$(".slomo").css({backgroundColor:'#1cb0f6'});
 } else {
 	var vid = document.getElementById("video");
 	vid.playbackRate = 0.3;
@@ -263,7 +256,7 @@ $(".next").click(function() {
 	var vid = document.getElementById("video");
 	vid.playbackRate = 1;
 	slomo = false;
-	$(".slomo").css({backgroundColor:'#fabce8'});
+	$(".slomo").css({backgroundColor:'#1cb0f6'});
 	setTimeout(() => {AppendAll();}, 300);
 	} else {
 		$(".toast").html("More skills coming soon...");
@@ -278,7 +271,7 @@ $(".prev").click(function() {
 	var vid = document.getElementById("video");
 	vid.playbackRate = 1;
 	slomo = false;
-	$(".slomo").css({backgroundColor:'#fabce8'});
+	$(".slomo").css({backgroundColor:'#1cb0f6'});
 	setTimeout(() => {AppendAll();}, 300);
 	} else {
 		$(".toast").html("This is the first skill");
@@ -294,14 +287,12 @@ setTimeout(() => {parent.location="ct_list.html"}, 600);
 $(".completed").click(function() {
 if (completedCheck) {
 completedCheck = false;
-$(".completed").css({backgroundColor:'#fabce8'});
-$(".completed").attr("src","res/completed.png");	
+$(".completed").css({backgroundColor:'#1cb0f6', boxShadow:'.5vw 1vw 0 #1898d5'});	
 localStorage.removeItem("" + opened + "_c" + opened_number + "");
 $(".toast").html("Removed from completed");
 } else {
 completedCheck = true;
-$(".completed").css({backgroundColor:'#21be23'});
-$(".completed").attr("src","res/completed2.png");
+$(".completed").css({backgroundColor:'#21be23', boxShadow:'.5vw 1vw 0 #52a71c'});
 localStorage.setItem("" + opened + "_c" + opened_number + "", 1);
 $(".toast").html("Added to completed");
 }
@@ -311,21 +302,20 @@ showToast();
 $(".wishlist").click(function() {
 if (wishlistCheck) {
 wishlistCheck = false;
-$(".wishlist").css({backgroundColor:'#fabce8'});
-$(".wishlist").attr("src","res/wishlist.png");	
+$(".wishlist").css({backgroundColor:'#1cb0f6', boxShadow:'.5vw 1vw 0 #1898d5'});
 localStorage.removeItem("" + opened + "_w" + opened_number + "");
 $(".toast").html("Removed from wishlist");
 } else {
 wishlistCheck = true;
-$(".wishlist").css({backgroundColor:'#ff526c'});
-$(".wishlist").attr("src","res/wishlist2.png");
+$(".wishlist").css({backgroundColor:'#ff526c', boxShadow:'.5vw 1vw 0 #df526c'});
+
 localStorage.setItem("" + opened + "_w" + opened_number + "", 1);
 $(".toast").html("Added to wishlist");
 }
 showToast();
 });
 
-$(".back-img").click(function() {
+$(".back-img, .title").click(function() {
 Outro();
 setTimeout(() => {window.history.back();}, 500);
 });
@@ -338,7 +328,7 @@ inter ++; localStorage.setItem("inter", inter);
 }
 if (inter >= 7) {
 inter = 0; localStorage.setItem("inter", inter);
-setTimeout(() => {parent.location="https://inter"}, 400);
+parent.location="https://inter";
 }
 });
 

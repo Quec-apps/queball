@@ -8,15 +8,15 @@
 	<title>Queball</title>
 <style>
 @font-face {
-	font-family: Roboto;
-	src: url(res/fonts/Roboto-Bold.ttf);
+	font-family: Din-bold;
+	src: url(res/fonts/din_bold.ttf);
 }
 html {
 width: 100vw; height: 100vh; overflow: hidden;
 }
 body {
 width: 100vw; height: 100vh; overflow: hidden;
-margin: 0; font-family: Roboto;
+margin: 0; font-family: Din-bold;
 user-select: none; /* supported by Chrome and Opera */
 -webkit-user-select: none; /* Safari */
 -khtml-user-select: none; /* Konqueror HTML */
@@ -40,21 +40,21 @@ transform: scale(1.2); opacity: 0;
 transition: all 400ms ease;
 }
 .ct {
-width: 150px; height: 50px; border-radius: 8px; margin-top: 1.5vh;
-position: relative; background-color: #befde5; display: flex; justify-content: space-evenly; align-items: center;
+width: 45vw; height: 13vw; border-radius: 8px; margin-top: 2vh; color: #58a700;
+position: relative; background-color: #d7ffb8; display: flex; justify-content: space-evenly; align-items: center;
 }
 .ct-img {
-width:35px; height: 35px; border-radius: 10px; background-color: aliceblue;
+width:9vw; height: 9vw; border-radius: 10px; background-color: aliceblue;
 }
 .ct-img2 {
-width:23px; height: 23px;
-position: absolute; top:-3px; left:86%; border-radius: 50%; display: none;
+width:6vw; height: 6vw;
+position: absolute; left:86%; border-radius: 10px; display: none;
 }
-.wishlist {background-color: #fabce8;}
-.completed {background-color: #52c51c;}
+.wishlist {background-color: #ff526c; top:7vw; }
+.completed {background-color: #52c51c; top:0; }
 .ct-txt {
-font-size: 12px;
-width: 105px; text-align: center;
+font-size: 4vw;
+width: 33vw; text-align: center;
 }
 
 .active:active {
@@ -97,7 +97,7 @@ $(".main-ct").append(`
 	<img class="ct-img" src="res/credit/${window[opened + "_cr" + i][1]}.jpg">
 	<div class="ct-txt">${i}. ${window[opened + "_t" + i]}</div>
 	<img src="res/wishlist.png" class="ct-img2 wishlist" id="wishlist${i}">
-	<img src="res/completed2.png" class="ct-img2 completed" id="completed${i}">
+	<img src="res/completed.png" class="ct-img2 completed" id="completed${i}">
 </div>
 `);
 }

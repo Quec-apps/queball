@@ -8,15 +8,15 @@
 	<title>Queball</title>
 <style>
 @font-face {
-	font-family: Roboto;
-	src: url(res/fonts/Roboto-Bold.ttf);
+	font-family: Din-bold;
+	src: url(res/fonts/din_bold.ttf);
 }
 html {
 width: 100vw; height: 100vh; overflow: hidden;
 }
 body {
 width: 100vw; height: 100vh; overflow: hidden;
-margin: 0; font-family: Roboto;
+margin: 0; font-family: Din-bold; color: #afafaf;
 user-select: none; /* supported by Chrome and Opera */
 -webkit-user-select: none; /* Safari */
 -khtml-user-select: none; /* Konqueror HTML */
@@ -24,7 +24,7 @@ user-select: none; /* supported by Chrome and Opera */
 -ms-user-select: none; /* Internet Explorer/Edge */
 }
 .title-bg {
-width: 100vw; height: 10vh;
+width: 95vw; height: 10vh; margin-left: 2.5vw;
 display: flex; align-items: center;
 transition: all 400ms ease; transform: translateX(-20%); opacity: 0; 
 }
@@ -40,7 +40,7 @@ width: 8vw; height: 8vw;
 .lives-bg {
 width: 16vw; height: 6vw;
 background-color: #fabce8; border-radius: 10px;
-position: fixed; top: 1.5vh; left: 80vw;
+position: fixed; top: 2.5vh; left: 80vw;
 display: flex; justify-content: space-between; align-items: center;
 z-index: 9; transform: scale(1.2); opacity: 0;
 transition: all 400ms ease;
@@ -53,7 +53,8 @@ transform: translateX(-15%);
 width: 8vw; height: 8vw;
 }
 .lives {
-transform: translateX(-3vw);
+transform: translateX(-3vw); color: #ff526c;
+font-size: 4vw;
 }
 .got-lives {
 display: none; justify-content: center; align-items: center;
@@ -68,19 +69,21 @@ transition: all 400ms ease;
 .ct {
 width: 90vw;
 height: 20vw;
-background-color: #fabce8;
-border-radius: 10px;
+background-color: #f7f7f7; border: solid 1vw #e5e5e5;
+border-radius: 10px; color: white;
 display: flex; align-items: center; justify-content: space-around;
 }
 .ct-txt {
-display: flex; align-items: center;
+    width: 22vw;
+display: flex; align-items: center; justify-content: space-around; color: #c5c5c5; font-size: 7vw;
 }
 .ct-img {
 width: 8vw; height: 8vw;
 }
 .button {
 width: 22vw; height: 10vw;
-background-color: #a3227f; color: white;
+background-color: #1cb0f6; box-shadow: .5vw 1vw 0 #1898d5;
+ color: white;
 border-radius: 10px;
 display: flex; justify-content: space-evenly; align-items: center;
 }
@@ -89,8 +92,10 @@ width: 8vw; height: 8vw;
 }
 
 .active:active {
-transition: all 200ms ease;
-opacity: .6 !important;
+transition: none;
+box-shadow: none;
+transform: translateX(1vw) !important;
+transform: translateY(.5vw) !important;
 }
 </style>
 </head>
@@ -107,7 +112,7 @@ opacity: .6 !important;
 <div class="main-ct">
     <div class="ct ct1">
         <div class="ct-txt">
-            <img src="res/lives.png" class="ct-img"> +3
+            <img src="res/lives.png" class="ct-img"> +2
         </div>
         <div class="button video-ad active">
             <img src="res/video.png" class="button-img"> Free
@@ -155,7 +160,7 @@ setTimeout(() => {$(".main-ct, .lives-bg").css({transform:'scale(1.2)', opacity:
 
 var lives = localStorage.getItem("lives");
 $(".lives").html(lives);
-$(".back-img").click(function() {
+$(".back-img, .title").click(function() {
 Outro();
 setTimeout(() => { window.history.back(); }, 500);
 });

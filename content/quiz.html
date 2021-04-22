@@ -8,15 +8,15 @@
 	<title>Queball</title>
 <style>
 @font-face {
-	font-family: Roboto;
-	src: url(res/fonts/Roboto-Bold.ttf);
+	font-family: Din-bold;
+	src: url(res/fonts/din_bold.ttf);
 }
 html {
 width: 100vw; height: 100vh; overflow: hidden;
 }
 body {
 width: 100vw; height: 100vh; overflow: hidden;
-margin: 0; font-family: Roboto;
+margin: 0; font-family: Din-bold; color: #afafaf;
 user-select: none; /* supported by Chrome and Opera */
 -webkit-user-select: none; /* Safari */
 -khtml-user-select: none; /* Konqueror HTML */
@@ -32,15 +32,9 @@ transition: all 400ms ease;
 }
 .top {
 width: 100vw; height: 35vh;
-background-color: #befde5; border-radius: 0 0 10px 10px;
 display: flex; justify-content: center; align-items: center;
 position: relative; transform: translateY(-20%); opacity: 0;
 transition: all 400ms ease;
-}
-.play-img {
-width: 25vh; height: 25vh;
-position: absolute; top: 3vh; left: 10vw;
-opacity: .3;
 }
 .q_img-bg {
 width:30vh; height: 30vh; background-color: white; border-radius: 10px;
@@ -61,7 +55,7 @@ transform: scale(1.2); opacity: 0;
 transition: all 400ms ease;
 }
 .question {
-width: 100vw; height: 15vh;
+width: 100vw; height: 15vh; 
 font-size: 5vw; text-align: center;
 display: flex; align-items: center; justify-content: center;
 }
@@ -71,8 +65,8 @@ display: flex; flex-wrap: wrap; align-content: space-around; justify-content: sp
 }
 .ans {
 width:40vw; padding: 2vh 0;
-background-color: #fabce8; color: #4e2b44; border-radius: 10px;
-text-align: center;
+background-color: #1cb0f6; color: white; border-radius: 10px;
+text-align: center; box-shadow: .5vw 1vw 0 #1898d5;
 }
 
 .bottom {
@@ -117,8 +111,8 @@ animation:finish-con 800ms ease 1;
 	100% {background-color:rgba(255, 255, 255, 1);}
 }
 .finish {
-width:90vw; height: 50vw; background-color: #befde5; border-radius: 10px; padding: 3vw 0;
-display: flex; flex-wrap: wrap; justify-content: center; align-content: space-evenly;
+width:90vw; height: 50vw; background-color: #1cb0f6; border-radius: 10px; padding: 3vw 0;
+display: flex; flex-wrap: wrap; justify-content: center; align-content: space-evenly; color: white;
 animation: finish 400ms ease 1;
 transition: all 400ms ease;
 } @keyframes finish {
@@ -128,7 +122,7 @@ transition: all 400ms ease;
 .txt2-bg {
 width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
 }
-.finish-txt, .finish-txt2 {width: 100%; text-align: center; color:#55806f; font-size: xx-large;}
+.finish-txt, .finish-txt2 {width: 100%; text-align: center; font-size: xx-large;}
 .finish-txt2 {width: 50%; font-size: large;}
 .new-highscore {
 width: 100%;
@@ -143,12 +137,15 @@ width: 100%; display: flex; justify-content: space-evenly; align-items: center;
 }
 .button-img {
 width: 15vw; height: 15vw;
-background-color: #fabce8; border-radius: 10px;
+background-color: white; border-radius: 10px;
+box-shadow: .5vw 1vw 0 #c8c8c8;
 }
 
 .active:active {
-transition: all 200ms ease;
-opacity: .4 !important;
+transition: none;
+box-shadow: none;
+transform: translateX(1vw) !important;
+transform: translateY(.5vw) !important;
 }
 
 .lives-bg {
@@ -167,7 +164,8 @@ transform: translateX(-15%);
 width: 8vw; height: 8vw;
 }
 .lives {
-transform: translateX(-3vw);
+transform: translateX(-3vw);  color: #ff526c;
+font-size: 4vw;
 }
 .got-lives {
 display: none; justify-content: center; align-items: center;
@@ -182,7 +180,6 @@ margin: 2vw 0;
 <div class="lives">2</div>
 </div>
 <div class="top">
-    <img src="res/playing2.png" class="play-img">
 	<div class="q_img-bg">
 		<div class="q_img-txt">Image is loading</div>
 		<img src="res/poster.png" class="q_img">
@@ -200,7 +197,7 @@ margin: 2vw 0;
 <div class="bottom">Score  <span id="level"></span></div>
 <div class="pop-con">
 	<div class="pop">
-		<img src="res/completed2.png" class="pop-img">
+		<img src="res/completed.png" class="pop-img">
 	</div>
 </div>
 <div class="finish-con">
@@ -310,10 +307,10 @@ setTimeout(() => {$(".finish-con").css({display:'flex'}); }, 400);
 function Pop() {
 if (correctAns) {
 $(".pop").css({backgroundColor: 'rgb(33, 190, 35)'});
-$(".pop-img").attr("src","res/completed2.png");	
+$(".pop-img").attr("src","res/completed.png");	
 } else {
 $(".pop").css({backgroundColor: 'rgb(255, 76, 30)'});
-$(".pop-img").attr("src","res/cancel2.png");	
+$(".pop-img").attr("src","res/cancel.png");	
 }
 $(".pop-con").css({display:'flex'});
 setTimeout(() => {$(".pop-con").css({display:'none'});}, 950);
