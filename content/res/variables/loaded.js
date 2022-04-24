@@ -1,5 +1,3 @@
-$("img").error(function() {
-parent.location="https://quec-apps.github.io/queball/content/error.html";
-});
+$("img").attr("onerror", "parent.location='https://quec-apps.github.io/queball/content/error.html'");
 
 var scriptLoaded = false;
